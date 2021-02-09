@@ -27,7 +27,7 @@ import com.querydsl.sql.types.Type;
  */
 public class QuerydslGenerator {
 
-	private static final String TABLES_PREFIX = "plm_";
+	private static final String TABLES_PREFIX = "cry_";
 
 	public static void main(String... args) {
 		Configuration configuration = new Configuration(SQLTemplates.DEFAULT);
