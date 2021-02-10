@@ -9521,16 +9521,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.0:
-  version "15.7.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
-  integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
-  dependencies:
-    loose-envify "^1.4.0"
-    object-assign "^4.1.1"
-    react-is "^16.8.1"
-
-prop-types@^15.7.2:
+prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.0, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://npm.coreoz.com/repository/npm-group/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9679,6 +9670,13 @@ ra-data-json-server@^3.12.1:
     query-string "^5.1.1"
     ra-core "^3.12.1"
 
+ra-data-simple-rest@^3.10.4:
+  version "3.10.4"
+  resolved "https://npm.coreoz.com/repository/npm-group/ra-data-simple-rest/-/ra-data-simple-rest-3.10.4.tgz#94bbcb8d08fa2aedcacf4561421fa5a3d59047a7"
+  integrity sha512-Qn7tPZUcmJXW1qIX1A7LqO9NSDhuYfKTUOOd+tICCePiLLsKf/uk7C7V0IoVaZHJSv9j/vB4QUzr8domBWzQ6g==
+  dependencies:
+    query-string "^5.1.1"
+
 ra-i18n-polyglot@^3.12.1:
   version "3.12.1"
   resolved "https://npm.coreoz.com/repository/npm-group/ra-i18n-polyglot/-/ra-i18n-polyglot-3.12.1.tgz#7ce7974923127d355c2812afb436ac5f53b039ae"
@@ -9691,6 +9689,13 @@ ra-language-english@^3.12.1:
   version "3.12.1"
   resolved "https://npm.coreoz.com/repository/npm-group/ra-language-english/-/ra-language-english-3.12.1.tgz#42fbe4ec584b3d4bc4d67518a45e86f2455fc189"
   integrity sha512-cX0EmbLO/KB1uec3tokHe3qcmKHpQvU0ZfMQNKD0m7VMKJLWBZ8d3RijxQqBOQRK2a2EtAFc5mGmtUAiWcdFgA==
+  dependencies:
+    ra-core "^3.12.1"
+
+ra-language-french@^3.12.1:
+  version "3.12.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/ra-language-french/-/ra-language-french-3.12.1.tgz#47c3c904066c0d39608477f41681ba129f99d693"
+  integrity sha512-GQ8jrKSewOg48Wkag/qYxxX2F7vEsgSZ6NbFZs3gtLMC2JZwI98Np6B49sx1zfnMCDBX4NbiU4EYoRh4I0vGzQ==
   dependencies:
     ra-core "^3.12.1"
 

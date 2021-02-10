@@ -10,7 +10,7 @@ Install [Lombok](https://projectlombok.org/): http://jnb.ociweb.com/jnb/jnbJan20
 
 Launching the server
 --------------------
-Just run the `crypto.WebApplication` class, you can then open your browser to <http://localhost:8080>.
+Just run the `crypto.WebApplication` class, you can then open your browser to <http://localhost:8084>.
 
 Configuration
 -------------
@@ -50,7 +50,7 @@ Swagger is pre-configured to provide documentation about the project web-service
 This documentation is protected by credentials that should be configured in the `application.conf` file.
 
 To access this documentation, start the project
-and go to <http://localhost:8080/webjars/swagger-ui/2.2.10-1/index.html?url=/api/swagger>.
+and go to <http://localhost:8084/webjars/swagger-ui/2.2.10-1/index.html?url=/api/swagger>.
 As a reminder, the default Swagger credentials are: `swagger//password`.
 
 More modules

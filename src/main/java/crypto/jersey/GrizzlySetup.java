@@ -18,7 +18,7 @@ import com.coreoz.plume.jersey.grizzly.GrizzlyErrorPageHandler;
  */
 public class GrizzlySetup {
 
-	private static final int DEFAULT_HTTP_PORT = 8080;
+	private static final int DEFAULT_HTTP_PORT = 8084;
 	private static final String DEFAULT_HTTP_HOST = "0.0.0.0";
 
 	public static void start(ResourceConfig jerseyResourceConfig, String httpPort, String httpHost)
