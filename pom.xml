@@ -96,6 +96,11 @@
             <artifactId>plume-conf</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.coreoz</groupId>
+            <artifactId>plume-admin-ws</artifactId>
+        </dependency>
+
         <!-- database -->
         <dependency>
             <groupId>com.coreoz</groupId>

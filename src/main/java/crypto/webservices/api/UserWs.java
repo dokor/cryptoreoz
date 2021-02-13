@@ -1,8 +1,10 @@
 package crypto.webservices.api;
 
-import com.coreoz.plume.jersey.security.permission.PublicApi;
-import crypto.db.generated.User;
-import crypto.services.user.UserService;
+import com.coreoz.plume.admin.db.generated.AdminUser;
+import com.coreoz.plume.admin.jersey.feature.RestrictToAdmin;
+import com.coreoz.plume.admin.services.user.AdminUserService;
+import com.coreoz.plume.admin.websession.WebSessionAdmin;
+import crypto.webservices.AdminPermissions;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
@@ -13,6 +15,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -21,21 +24,22 @@ import java.util.List;
 @Api("Manage users web-services")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-@PublicApi
+@RestrictToAdmin(AdminPermissions.MANAGE_USERS)
 @Singleton
 public class UserWs {
 
-    private final UserService userService;
+    private final AdminUserService adminUserService;
 
     @Inject
-    public UserWs(UserService userService) {
-        this.userService = userService;
+    public UserWs(AdminUserService adminUserService) {
+        this.adminUserService = adminUserService;
     }
 
     @GET
     @ApiOperation("Get All users")
-    public Response getAll() {
-        List<User> users = userService.findAll();
+    public Response getAll(@Context WebSessionAdmin webSessionAdmin) {
+        // TODO ne pas tout renvoyer, faire un bean avec juste les informations utiles
+        List<AdminUser> users = adminUserService.findAll();
         return Response.ok(users)
             .header("Content-Range", "user 0-" + users.size() + "/" + users.size())
             .build();
@@ -44,8 +48,9 @@ public class UserWs {
     @GET
     @ApiOperation("Get one user by id")
     @Path("/{id}")
-    public User getById(@PathParam("id") Long id) {
-        return userService.findById(id);
+    public AdminUser getById(@PathParam("id") Long id) {
+        // TODO ne pas tout renvoyer, faire un bean avec juste les informations utiles
+        return adminUserService.findById(id);
     }
 
 }

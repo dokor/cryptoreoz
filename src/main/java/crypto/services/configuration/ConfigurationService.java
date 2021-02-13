@@ -15,10 +15,6 @@ public class ConfigurationService {
 		this.config = config;
 	}
 
-	public String hello() {
-		return config.getString("hello");
-	}
-
 	public String swaggerAccessUsername() {
 		return config.getString("swagger.access.username");
 	}

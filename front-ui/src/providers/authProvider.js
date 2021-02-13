@@ -1,29 +1,48 @@
+import { LOGIN_PAGE } from '../routes';
+
+const parseJwt = (token) => {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+
+  return JSON.parse(jsonPayload);
+};
+
 export default {
   login: ({ username, password }) => {
-    const request = new Request('/api/auth', {
+    const request = new Request('/api/admin/session', {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ userName: username, password }),
       headers: new Headers({ 'Content-Type': 'application/json' }),
     });
     return fetch(request)
       .then(response => {
-        console.log(response)
         if (response.status < 200 || response.status >= 300) {
           throw new Error(response.statusText);
         }
         return response.json();
       })
-      .then(auth => {
-        localStorage.setItem('auth', JSON.stringify(auth));
+      .then(authInfos => {
+        const userInfos = parseJwt(authInfos.webSessionToken);
+        localStorage.setItem('auth', JSON.stringify({
+          token: authInfos.webSessionToken,
+          id: userInfos.idUser,
+          fullName: userInfos.fullName,
+          avatar: '',
+        }));
+        localStorage.setItem('permissions', userInfos.permissions);
       })
       .catch(() => {
-        throw new Error('Network error')
+        throw new Error('Identification incorrecte')
       });
   },
   checkError: (error) => {
     const status = error.status;
     if (status === 401 || status === 403) {
       localStorage.removeItem('auth');
+      localStorage.removeItem('permissions');
       return Promise.reject({ redirectTo: '/credentials-required' });
     }
     // other error code (404, 500, etc): no need to log out
@@ -34,7 +53,8 @@ export default {
     : Promise.reject({ redirectTo: '/no-access' }),
   logout: () => {
     localStorage.removeItem('auth');
-    return Promise.resolve('/login');
+    localStorage.removeItem('permissions');
+    return Promise.resolve(LOGIN_PAGE);
   },
   getIdentity: () => {
     try {

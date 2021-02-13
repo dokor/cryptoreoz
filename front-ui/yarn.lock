@@ -1642,6 +1642,109 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@react-financial-charts/annotations@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/annotations/-/annotations-1.0.1.tgz#7b61aeea2cba592082a7837ca28ee4dcc875de64"
+  integrity sha512-VDIx8LJucqwQknNo/lrh0o2xD2qNMg+qnQCd9Q6NuWoD+/ZDc+Afg+A6TWeEh7tg58UlstKMz+ImyFxKY0GDag==
+  dependencies:
+    "@react-financial-charts/core" "^1.0.1"
+    "@types/d3-scale" "^3.2.2"
+    prop-types "^15.7.2"
+
+"@react-financial-charts/axes@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/axes/-/axes-1.0.1.tgz#5480498bb9ed8b6da154e37a4ec4873ed81c0c5b"
+  integrity sha512-EJmXHImMssiOsxWs5YDRh2lE5hv3GZJFru6G3CKjOfzDU+VNZiduXpj247B3DKXlEabKwRgJ/0uTXETV8t/Q2g==
+  dependencies:
+    "@react-financial-charts/core" "^1.0.1"
+    "@types/d3-scale" "^3.2.2"
+    d3-array "^2.9.1"
+    d3-force "^2.1.1"
+    d3-scale "^3.2.3"
+    d3-selection "^2.0.0"
+
+"@react-financial-charts/coordinates@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/coordinates/-/coordinates-1.0.1.tgz#12e841462bdc96900e1a02b43ac59c3e6b4a91ac"
+  integrity sha512-TiWDuB1xFVG/SIL9Vmoz4XqsEy5RrSFRWXfRZVpHGIC103wbcRFeu9yJdZwmbn1iwKA9eOmAtFQXvzQXocEOiw==
+  dependencies:
+    "@react-financial-charts/core" "^1.0.1"
+    d3-format "^2.0.0"
+    prop-types "^15.7.2"
+
+"@react-financial-charts/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/core/-/core-1.0.1.tgz#f493116d0515e2d3b9a2268288956c4e686cbdaf"
+  integrity sha512-Uo86Gjv/1OKC6GN0TdobyJHQE9mJzIxTrYnaUCihKxv6w0JRpvRiMiTXh1RTY9fGfZqrpiP3NqbnZII3MLzOWA==
+  dependencies:
+    "@types/d3-scale" "^3.2.2"
+    d3-array "^2.9.1"
+    d3-scale "^3.2.3"
+    d3-selection "^2.0.0"
+    lodash.flattendeep "^4.4.0"
+    prop-types "^15.7.2"
+
+"@react-financial-charts/indicators@^1.0.0":
+  version "1.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/indicators/-/indicators-1.0.0.tgz#ce961d389f186b37370ad291c3fc42aa5a434440"
+  integrity sha512-I7fVQ+pWG6JQ3GZrJR1lANg/AlVn0zXA9V2PKsoWBrxl2d9Jy8gMY0eIwUBJQH95IouSnQmwJsy0pnJXMDxHiQ==
+  dependencies:
+    d3-array "^2.9.1"
+    d3-scale "^3.2.3"
+
+"@react-financial-charts/interactive@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/interactive/-/interactive-1.0.1.tgz#5152c4e270771e84e49e27cfd28d81d6504e26b9"
+  integrity sha512-esrceMCwKcBF38H/ZoZZkmc5tMtexp8j8X6tUcdVl+kWjYhxURbmBj1zNkJJhFgQz+SALz3VlmyorB4En6sMNw==
+  dependencies:
+    "@react-financial-charts/coordinates" "^1.0.1"
+    "@react-financial-charts/core" "^1.0.1"
+    d3-array "^2.9.1"
+    d3-format "^2.0.0"
+    d3-interpolate "^2.0.1"
+    d3-path "^2.0.0"
+    prop-types "^15.7.2"
+
+"@react-financial-charts/scales@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/scales/-/scales-1.0.1.tgz#45567c8222b93802866c304452837a0e0da34497"
+  integrity sha512-5etNn1IPitVJE2gPOLDM/JrKJSNWrb7LTyRNfrhhvjjQgnNh26/JXItYY1j6o5NrdA3W/tzcFlDDqyVC3yqoUg==
+  dependencies:
+    "@react-financial-charts/core" "^1.0.1"
+    d3-array "^2.9.1"
+    d3-scale "^3.2.3"
+    d3-time-format "^3.0.0"
+
+"@react-financial-charts/series@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/series/-/series-1.0.1.tgz#6e97a06d5308e2f78881b348cc5e5e1d34d6cd5e"
+  integrity sha512-h4pR1mx1ZUbW4qU2YT1PCLLNx2xEgWjsniSiIz656XvakNE9IrlHxnTmzLmIkivcJFdnJjw0DEvIOdPTcDTpLg==
+  dependencies:
+    "@react-financial-charts/core" "^1.0.1"
+    "@types/d3-scale" "^3.2.2"
+    d3-array "^2.9.1"
+    d3-scale "^3.2.3"
+    d3-shape "^2.0.0"
+
+"@react-financial-charts/tooltip@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/tooltip/-/tooltip-1.0.1.tgz#149c0cdd4f9b3e4ad03b6ac173be92ad81359375"
+  integrity sha512-j95zlxoaLMXz6bfDWNlk4AujBUqA0akJQlAEDU22Houb+wnBubj35GmAKBAGdyOQ9rz9BWOfj8M0ucQd//rTMQ==
+  dependencies:
+    "@react-financial-charts/core" "^1.0.1"
+    d3-array "^2.9.1"
+    d3-format "^2.0.0"
+    d3-time-format "^3.0.0"
+    prop-types "^15.7.2"
+
+"@react-financial-charts/utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/@react-financial-charts/utils/-/utils-1.0.0.tgz#c373205896def4e65a90b7250a248b9db0f55312"
+  integrity sha512-KwtdiRX1Syr5lUAyTBYUGwVoEuARnl922waVSVKYHGfblNVnZ3LaeDFZDlwbZrohJgIMvIIP5INA1Eysg5JKPg==
+  dependencies:
+    "@types/react-virtualized-auto-sizer" "^1.0.0"
+    react-virtualized-auto-sizer "^1.0.3"
+
 "@redux-saga/core@^1.1.3":
   version "1.1.3"
   resolved "https://npm.coreoz.com/repository/npm-group/@redux-saga/core/-/core-1.1.3.tgz#3085097b57a4ea8db5528d58673f20ce0950f6a4"
@@ -1937,6 +2040,33 @@
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
+"@types/d3-dsv@^2.0.1":
+  version "2.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/@types/d3-dsv/-/d3-dsv-2.0.1.tgz#44ce09b025cf365d27cbe11fc13cd10954369627"
+  integrity sha512-wovgiG9Mgkr/SZ/m/c0m+RwrIT4ozsuCWeLxJyoObDWsie2DeQT4wzMdHZPR9Ya5oZLQT3w3uSl0NehG0+0dCA==
+
+"@types/d3-format@^2.0.0":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/@types/d3-format/-/d3-format-2.0.0.tgz#607d261cb268f0a027f100575491031539a40ee6"
+  integrity sha512-uagdkftxnGkO4pZw5jEYOM5ZnZOEsh7z8j11Qxk85UkB2RzfUUxRl7R9VvvJZHwKn8l+x+rpS77Nusq7FkFmIg==
+
+"@types/d3-scale@^3.2.2":
+  version "3.2.2"
+  resolved "https://npm.coreoz.com/repository/npm-group/@types/d3-scale/-/d3-scale-3.2.2.tgz#5e28d0b1c599328aaec6094219f10a2570be6d74"
+  integrity sha512-qpQe8G02tzUwt9sdWX1h8A/W0Q1+N48wMnYXVOkrzeLUkCfvzJYV9Ee3aORCS4dN4ONRLFmMvaXdziQ29XGLjQ==
+  dependencies:
+    "@types/d3-time" "*"
+
+"@types/d3-time-format@^3.0.0":
+  version "3.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/@types/d3-time-format/-/d3-time-format-3.0.0.tgz#913e984362a59792dc8d8b122dd17625991eade2"
+  integrity sha512-UpLg1mn/8PLyjr+J/JwdQJM/GzysMvv2CS8y+WYAL5K0+wbvXv/pPSLEfdNaprCZsGcXTxPsFMy8QtkYv9ueew==
+
+"@types/d3-time@*":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/@types/d3-time/-/d3-time-2.0.0.tgz#831dd093db91f16b83ba980e194bb8e4bcef44d6"
+  integrity sha512-Abz8bTzy8UWDeYs9pCa3D37i29EWDjNTjemdk0ei1ApYVNqulYlGUKip/jLOpogkPSsPz/GvZCYiC7MFlEk0iQ==
+
 "@types/eslint@^7.2.6":
   version "7.2.6"
   resolved "https://npm.coreoz.com/repository/npm-group/@types/eslint/-/eslint-7.2.6.tgz#5e9aff555a975596c03a98b59ecd103decc70c3c"
@@ -2067,6 +2197,13 @@
   version "4.4.0"
   resolved "https://npm.coreoz.com/repository/npm-group/@types/react-transition-group/-/react-transition-group-4.4.0.tgz#882839db465df1320e4753e6e9f70ca7e9b4d46d"
   integrity sha512-/QfLHGpu+2fQOqQaXh8MG9q03bFENooTb/it4jr5kKaZlDQfWvjqWZg48AwzPVMBHlRuTRAY7hRHCEOXz5kV6w==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-virtualized-auto-sizer@^1.0.0":
+  version "1.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/@types/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.0.tgz#fc32f30a8dab527b5816f3a757e1e1d040c8f272"
+  integrity sha512-NMErdIdSnm2j/7IqMteRiRvRulpjoELnXWUwdbucYCz84xG9PHcoOrr7QfXwB/ku7wd6egiKFrzt/+QK4Imeeg==
   dependencies:
     "@types/react" "*"
 
@@ -3684,7 +3821,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.20.0:
+commander@2, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -4239,6 +4376,103 @@ cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+
+d3-array@^2.3.0, d3-array@^2.9.1:
+  version "2.11.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-array/-/d3-array-2.11.0.tgz#5ed6a2869bc7d471aec8df9ff6ed9fef798facc4"
+  integrity sha512-26clcwmHQEdsLv34oNKq5Ia9tQ26Y/4HqS3dQzF42QBUqymZJ+9PORcN1G52bt37NsL2ABoX4lvyYZc+A9Y0zw==
+  dependencies:
+    internmap "^1.0.0"
+
+"d3-color@1 - 2":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-color/-/d3-color-2.0.0.tgz#8d625cab42ed9b8f601a1760a389f7ea9189d62e"
+  integrity sha512-SPXi0TSKPD4g9tw0NMZFnR95XVgUZiBH+uUTqQuDu1OsE2zomHU7ho0FISciaPvosimixwHFl3WHLGabv6dDgQ==
+
+"d3-dispatch@1 - 2":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-dispatch/-/d3-dispatch-2.0.0.tgz#8a18e16f76dd3fcaef42163c97b926aa9b55e7cf"
+  integrity sha512-S/m2VsXI7gAti2pBoLClFFTMOO1HTtT0j99AuXLoGFKO6deHDdnv6ZGTxSTTUTgO1zVcv82fCOtDjYK4EECmWA==
+
+d3-dsv@^2.0.0:
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-dsv/-/d3-dsv-2.0.0.tgz#b37b194b6df42da513a120d913ad1be22b5fe7c5"
+  integrity sha512-E+Pn8UJYx9mViuIUkoc93gJGGYut6mSDKy2+XaPwccwkRGlR+LO97L2VCCRjQivTwLHkSnAJG7yo00BWY6QM+w==
+  dependencies:
+    commander "2"
+    iconv-lite "0.4"
+    rw "1"
+
+d3-force@^2.1.1:
+  version "2.1.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-force/-/d3-force-2.1.1.tgz#f20ccbf1e6c9e80add1926f09b51f686a8bc0937"
+  integrity sha512-nAuHEzBqMvpFVMf9OX75d00OxvOXdxY+xECIXjW6Gv8BRrXu6gAWbv/9XKrvfJ5i5DCokDW7RYE50LRoK092ew==
+  dependencies:
+    d3-dispatch "1 - 2"
+    d3-quadtree "1 - 2"
+    d3-timer "1 - 2"
+
+"d3-format@1 - 2", d3-format@^2.0.0:
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-format/-/d3-format-2.0.0.tgz#a10bcc0f986c372b729ba447382413aabf5b0767"
+  integrity sha512-Ab3S6XuE/Q+flY96HXT0jOXcM4EAClYFnRGY5zsjRGNy6qCYrQsMffs7cV5Q9xejb35zxW5hf/guKw34kvIKsA==
+
+"d3-interpolate@1.2.0 - 2", d3-interpolate@^2.0.1:
+  version "2.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-interpolate/-/d3-interpolate-2.0.1.tgz#98be499cfb8a3b94d4ff616900501a64abc91163"
+  integrity sha512-c5UhwwTs/yybcmTpAVqwSFl6vrQ8JZJoT5F7xNFK9pymv5C0Ymcc9/LIJHtYIggg/yS9YHw8i8O8tgb9pupjeQ==
+  dependencies:
+    d3-color "1 - 2"
+
+"d3-path@1 - 2", d3-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-path/-/d3-path-2.0.0.tgz#55d86ac131a0548adae241eebfb56b4582dd09d8"
+  integrity sha512-ZwZQxKhBnv9yHaiWd6ZU4x5BtCQ7pXszEV9CU6kRgwIQVQGLMv1oiL4M+MK/n79sYzsj+gcgpPQSctJUsLN7fA==
+
+"d3-quadtree@1 - 2":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-quadtree/-/d3-quadtree-2.0.0.tgz#edbad045cef88701f6fee3aee8e93fb332d30f9d"
+  integrity sha512-b0Ed2t1UUalJpc3qXzKi+cPGxeXRr4KU9YSlocN74aTzp6R/Ud43t79yLLqxHRWZfsvWXmbDWPpoENK1K539xw==
+
+d3-scale@^3.2.3:
+  version "3.2.3"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-scale/-/d3-scale-3.2.3.tgz#be380f57f1f61d4ff2e6cbb65a40593a51649cfd"
+  integrity sha512-8E37oWEmEzj57bHcnjPVOBS3n4jqakOeuv1EDdQSiSrYnMCBdMd3nc4HtKk7uia8DUHcY/CGuJ42xxgtEYrX0g==
+  dependencies:
+    d3-array "^2.3.0"
+    d3-format "1 - 2"
+    d3-interpolate "1.2.0 - 2"
+    d3-time "1 - 2"
+    d3-time-format "2 - 3"
+
+d3-selection@^2.0.0:
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-selection/-/d3-selection-2.0.0.tgz#94a11638ea2141b7565f883780dabc7ef6a61066"
+  integrity sha512-XoGGqhLUN/W14NmaqcO/bb1nqjDAw5WtSYb2X8wiuQWvSZUsUVYsOSkOybUrNvcBjaywBdYPy03eXHMXjk9nZA==
+
+d3-shape@^2.0.0:
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-shape/-/d3-shape-2.0.0.tgz#2331b62fa784a2a1daac47a7233cfd69301381fd"
+  integrity sha512-djpGlA779ua+rImicYyyjnOjeubyhql1Jyn1HK0bTyawuH76UQRWXd+pftr67H6Fa8hSwetkgb/0id3agKWykw==
+  dependencies:
+    d3-path "1 - 2"
+
+"d3-time-format@2 - 3", d3-time-format@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-time-format/-/d3-time-format-3.0.0.tgz#df8056c83659e01f20ac5da5fdeae7c08d5f1bb6"
+  integrity sha512-UXJh6EKsHBTjopVqZBhFysQcoXSv/5yLONZvkQ5Kk3qbwiUYkdX17Xa1PT6U1ZWXGGfB1ey5L8dKMlFq2DO0Ag==
+  dependencies:
+    d3-time "1 - 2"
+
+"d3-time@1 - 2":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-time/-/d3-time-2.0.0.tgz#ad7c127d17c67bd57a4c61f3eaecb81108b1e0ab"
+  integrity sha512-2mvhstTFcMvwStWd9Tj3e6CEqtOivtD8AUiHT8ido/xmzrI9ijrUUihZ6nHuf/vsScRBonagOdj0Vv+SEL5G3Q==
+
+"d3-timer@1 - 2":
+  version "2.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/d3-timer/-/d3-timer-2.0.0.tgz#055edb1d170cfe31ab2da8968deee940b56623e6"
+  integrity sha512-TO4VLh0/420Y/9dO3+f9abDEFYeCUr2WZRlxJvbp4HPTQcSylXNiL6yZa9FIUvV1yRiFufl1bszTCLDqv9PWNA==
 
 d@1, d@^1.0.1:
   version "1.0.1"
@@ -6124,7 +6358,7 @@ hyphenate-style-name@^1.0.3:
   resolved "https://npm.coreoz.com/repository/npm-group/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz#691879af8e220aea5750e8827db4ef62a54e361d"
   integrity sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==
 
-iconv-lite@0.4.24:
+iconv-lite@0.4, iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
@@ -6300,6 +6534,11 @@ internal-slot@^1.0.2:
     get-intrinsic "^1.1.0"
     has "^1.0.3"
     side-channel "^1.0.4"
+
+internmap@^1.0.0:
+  version "1.0.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/internmap/-/internmap-1.0.0.tgz#3c6bf0944b0eae457698000412108752bbfddb56"
+  integrity sha512-SdoDWwNOTE2n4JWUsLn4KXZGuZPjPF9yyOGc8bnfWnBQh7BD/l80rzSznKc/r4Y0aQ7z3RTk9X+tV4tHBpu+dA==
 
 ip-regex@^2.1.0:
   version "2.1.0"
@@ -7550,6 +7789,11 @@ lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+
+lodash.flattendeep@^4.4.0:
+  version "4.4.0"
+  resolved "https://npm.coreoz.com/repository/npm-group/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz#fb030917f86a3134e5bc9bec0d69e0013ddfedb2"
+  integrity sha1-+wMJF/hqMTTlvJvsDWngAT3f7bI=
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -9856,6 +10100,22 @@ react-final-form@^6.3.3:
   dependencies:
     "@babel/runtime" "^7.12.1"
 
+react-financial-charts@^1.0.1:
+  version "1.0.1"
+  resolved "https://npm.coreoz.com/repository/npm-group/react-financial-charts/-/react-financial-charts-1.0.1.tgz#dc7f0184792d6f44c2c2b0f4c7c82f168252b5a8"
+  integrity sha512-kWImqFGYSnyFC0W1xLbcefFPxFutRnp3HQ8/CQnItO/F9x1VI2Gl9ObVSkM6jdoefHV0Tg2qXyC0tH7FYaCo1Q==
+  dependencies:
+    "@react-financial-charts/annotations" "^1.0.1"
+    "@react-financial-charts/axes" "^1.0.1"
+    "@react-financial-charts/coordinates" "^1.0.1"
+    "@react-financial-charts/core" "^1.0.1"
+    "@react-financial-charts/indicators" "^1.0.0"
+    "@react-financial-charts/interactive" "^1.0.1"
+    "@react-financial-charts/scales" "^1.0.1"
+    "@react-financial-charts/series" "^1.0.1"
+    "@react-financial-charts/tooltip" "^1.0.1"
+    "@react-financial-charts/utils" "^1.0.0"
+
 react-is@^16.13.1, react-is@^16.5.2, react-is@^16.6.0, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://npm.coreoz.com/repository/npm-group/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -9991,6 +10251,11 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.1:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-virtualized-auto-sizer@^1.0.3:
+  version "1.0.4"
+  resolved "https://npm.coreoz.com/repository/npm-group/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.4.tgz#2b83adb5ecdee8dcb33784e96ee0074eb5369665"
+  integrity sha512-fdrY0ZX4Ywv0IIYPY/grQXcVQ44OLOsftl2u81coKe2Ga1wT3ps4JXaeu1JdlfjQxDI5BVsWjZQbpzmjmtI7Qw==
 
 react@^17.0.1:
   version "17.0.1"
@@ -10488,6 +10753,11 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   integrity sha1-6Eg5bwV9Ij8kOGkkYY4laUFh7Ec=
   dependencies:
     aproba "^1.1.1"
+
+rw@1:
+  version "1.3.3"
+  resolved "https://npm.coreoz.com/repository/npm-group/rw/-/rw-1.3.3.tgz#3f862dfa91ab766b14885ef4d01124bfda074fb4"
+  integrity sha1-P4Yt+pGrdmsUiF700BEkv9oHT7Q=
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
@@ -11717,6 +11987,11 @@ typescript-tuple@^2.2.1:
   integrity sha512-Zcr0lbt8z5ZdEzERHAMAniTiIKerFCMgd7yjq1fPnDJ43et/k9twIFQMUYff9k5oXcsQ0WpvFcgzK2ZKASoW6Q==
   dependencies:
     typescript-compare "^0.0.2"
+
+typescript@^4.1.5:
+  version "4.1.5"
+  resolved "https://npm.coreoz.com/repository/npm-group/typescript/-/typescript-4.1.5.tgz#123a3b214aaff3be32926f0d8f1f6e704eb89a72"
+  integrity sha512-6OSu9PTIzmn9TCDiovULTnET6BgXtDYL4Gg4szY+cGsc3JP1dQL8qvE8kShTRx1NIw4Q9IBHlwODjkjWEtMUyA==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
