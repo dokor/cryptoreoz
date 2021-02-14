@@ -1,10 +1,12 @@
 package crypto.services.binance;
 
+import com.binance.api.client.BinanceApiCallback;
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
+import com.binance.api.client.BinanceApiWebSocketClient;
 import com.binance.api.client.domain.account.Account;
 import com.binance.api.client.domain.account.AssetBalance;
-import com.binance.api.client.domain.market.TickerPrice;
+import com.binance.api.client.domain.event.AggTradeEvent;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Stage;
@@ -36,6 +38,22 @@ public class BinanceService {
         UserPlatform userPlatform = platformService.findByIdUserAndIdPlatform(idUser, ID);
         BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance(userPlatform.getApiKey(), userPlatform.getSecretKey());
         return factory.newRestClient();
+    }
+
+    private void testSurLesWebSockets() {
+        BinanceApiWebSocketClient webSocketClient = BinanceApiClientFactory.newInstance().newWebSocketClient();
+        webSocketClient.onAggTradeEvent("btcusdt", new BinanceApiCallback<>() {
+            @Override
+            public void onResponse(final AggTradeEvent response) {
+                System.out.println(response.getPrice());
+            }
+
+            @Override
+            public void onFailure(final Throwable cause) {
+                System.err.println("Web socket failed");
+                cause.printStackTrace(System.err);
+            }
+        });
     }
 
     public List<AssetBalance> getWallet(Long idUser) {
