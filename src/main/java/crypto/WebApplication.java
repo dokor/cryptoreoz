@@ -2,6 +2,8 @@ package crypto;
 
 import java.io.IOException;
 
+import crypto.services.binance.BinanceService;
+import crypto.websocket.WebSocketApp;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,13 +30,19 @@ public class WebApplication {
 		Injector injector = Guice.createInjector(Stage.PRODUCTION, new ApplicationModule());
 
 		ResourceConfig jerseyResourceConfig = injector.getInstance(ResourceConfig.class);
+		WebSocketApp webSocketApp = injector.getInstance(WebSocketApp.class);
+
+		BinanceService binanceService = injector.getInstance(BinanceService.class);
+		binanceService.testSurLesWebSockets();
+
 		// enable Jersey to create objects through Guice Injector instance
 		jerseyResourceConfig.register(new JerseyGuiceFeature(injector));
 		// starts the server
 		GrizzlySetup.start(
 			jerseyResourceConfig,
 			System.getProperty("http.port"),
-			System.getProperty("http.address")
+			System.getProperty("http.address"),
+			webSocketApp
 		);
 
 		logger.info("Server started in {} ms", System.currentTimeMillis() - startTimestamp);

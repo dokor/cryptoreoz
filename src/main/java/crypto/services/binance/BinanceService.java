@@ -15,6 +15,7 @@ import crypto.db.generated.UserPlatform;
 import crypto.guice.ApplicationModule;
 import crypto.services.currency.CurrencyService;
 import crypto.services.platform.PlatformService;
+import crypto.services.socket.SocketService;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -26,12 +27,14 @@ public class BinanceService {
     private static final Long ID = 1L;
     private final PlatformService platformService;
     private final CurrencyService currencyService;
+    private final SocketService socketService;
 
 
     @Inject
-    public BinanceService(PlatformService platformService, CurrencyService currencyService) {
+    public BinanceService(PlatformService platformService, CurrencyService currencyService, SocketService socketService) {
         this.platformService = platformService;
         this.currencyService = currencyService;
+        this.socketService = socketService;
     }
 
     private BinanceApiRestClient getClientInstance(Long idUser) {
@@ -40,12 +43,12 @@ public class BinanceService {
         return factory.newRestClient();
     }
 
-    private void testSurLesWebSockets() {
+    public void testSurLesWebSockets() {
         BinanceApiWebSocketClient webSocketClient = BinanceApiClientFactory.newInstance().newWebSocketClient();
         webSocketClient.onAggTradeEvent("btcusdt", new BinanceApiCallback<>() {
             @Override
             public void onResponse(final AggTradeEvent response) {
-                System.out.println(response.getPrice());
+                socketService.broadcastMessage("FINANCE", response.getPrice());
             }
 
             @Override
@@ -81,9 +84,7 @@ public class BinanceService {
     public static void main(String[] args) {
         Injector injector = Guice.createInjector(Stage.PRODUCTION, new ApplicationModule());
         BinanceService binanceService = injector.getInstance(BinanceService.class);
-        System.out.println(binanceService.getWallet(1L));
+        binanceService.testSurLesWebSockets();
     }
 
-
 }
-
