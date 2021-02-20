@@ -1,29 +1,33 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { Title } from 'react-admin';
 import StockChart from './StockChart';
 import ReconnectableWebSocket from './socket/ReconnectableWebSocket';
-import { useState } from 'react';
 
 export default () => {
   const [btcValue, setBtcValue] = useState(0);
 
-  const socket = new ReconnectableWebSocket({
-    url: `${document.location.protocol === 'https:' ? 'wss://' : 'ws://'}${document.location.host}/socket`,
-    onOpen: (e) => {
-      console.log('OPEN !', e)
-    },
-    onMessage: (e) => {
-      setBtcValue(parseFloat(e.data.substring(8, e.data.length)))
-    },
-    onClose: (e) => {
-      console.log('CLOSE !', e)
-    },
-  });
+  useEffect(() => {
+    const newSocket = new ReconnectableWebSocket({
+      url: `${document.location.protocol === 'https:' ? 'wss://' : 'ws://'}${document.location.host}/socket`,
+      onOpen: (e) => {
+        console.log('open socket', e)
+      },
+      onMessage: (e) => {
+        setBtcValue(parseFloat(e.data.substring(8, e.data.length)))
+      },
+      onClose: (e) => {
+        console.log('close socket', e)
+      },
+    });
+    newSocket.open();
 
-  socket.open();
-
+    return function cleanup() {
+      newSocket.close();
+    }
+  }, []);
   return (
     <Card>
       <Title title="Welcome to the administration"/>
