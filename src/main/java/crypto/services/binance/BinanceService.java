@@ -15,6 +15,7 @@ import crypto.db.generated.UserPlatform;
 import crypto.guice.ApplicationModule;
 import crypto.services.currency.CurrencyService;
 import crypto.services.platform.PlatformService;
+import crypto.services.socket.SocketApplication;
 import crypto.services.socket.SocketService;
 
 import javax.inject.Inject;
@@ -48,7 +49,7 @@ public class BinanceService {
         webSocketClient.onAggTradeEvent("btcusdt", new BinanceApiCallback<>() {
             @Override
             public void onResponse(final AggTradeEvent response) {
-                socketService.broadcastMessage("FINANCE", response.getPrice());
+                socketService.broadcastMessage(SocketApplication.FINANCE.name(), "btcusdt", response.getPrice());
             }
 
             @Override

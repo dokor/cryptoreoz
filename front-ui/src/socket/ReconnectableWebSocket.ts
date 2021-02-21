@@ -6,6 +6,7 @@ export class ConnectionState {
 }
 
 export default class ReconnectableWebSocket {
+    type: string;
     url: string;
     onOpen: (ev: Event) => any;
     onMessage: (ev: MessageEvent) => any;
@@ -13,6 +14,7 @@ export default class ReconnectableWebSocket {
     connection: any;
 
     constructor(params: any) {
+        this.type = params.type;
         this.url = params.url;
         this.onOpen = params.onOpen;
         this.onMessage = params.onMessage;
@@ -28,7 +30,14 @@ export default class ReconnectableWebSocket {
 
         this.connection = new WebSocket(this.url);
         this.connection.onopen = this.onOpen;
-        this.connection.onmessage = this.onMessage;
+        this.connection.onmessage = (e: MessageEvent) => {
+            const newEvent = {
+                ...e,
+                data: e.data.replace(this.type + ":", '')
+            };
+            return this.onMessage(newEvent)
+        }
+
         this.connection.onclose = this.onClose;
     };
 

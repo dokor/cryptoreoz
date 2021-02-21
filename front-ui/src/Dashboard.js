@@ -11,12 +11,16 @@ export default () => {
 
   useEffect(() => {
     const newSocket = new ReconnectableWebSocket({
+      type: 'FINANCE',
       url: `${document.location.protocol === 'https:' ? 'wss://' : 'ws://'}${document.location.host}/socket`,
       onOpen: (e) => {
         console.log('open socket', e)
       },
       onMessage: (e) => {
-        setBtcValue(parseFloat(e.data.substring(8, e.data.length)))
+        const [type, value] = e.data.split(':');
+        if (type === 'btcusdt') {
+          setBtcValue(parseFloat(value))
+        }
       },
       onClose: (e) => {
         console.log('close socket', e)

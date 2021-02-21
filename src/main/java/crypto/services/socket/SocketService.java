@@ -104,9 +104,9 @@ public class SocketService {
     }
 
 
-    public void broadcastMessage(String messagePrefixName, String message) {
+    public void broadcastMessage(String socketType, String messageType, String message) {
         sockets.forEach((id, socketSession) -> {
-            socketSession.sendMessage(messagePrefixName, message);
+            socketSession.sendMessage(socketType, messageType, message);
         });
 
     }
